@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+}
+
+#menuContenedor {
+    background-color: brown;
+    position: fixed;
+    width: 100%;
+}
+
+#redes ul{
+    gap: 20px;
+    font-size: 34px;
+}
+
+#menu ul{
+    gap: 30px;
+    font-size: 24px;
+}
+
+/* .navbar-toggle{
+    display:none;
+}
+
+.navbar-toggle{
+    display:block;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    margin:5px;
+    cursor: pointer;
+} */
