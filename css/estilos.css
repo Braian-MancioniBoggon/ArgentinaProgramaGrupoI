@@ -53,3 +53,54 @@ ul a{
     margin:5px;
     cursor: pointer;
 } */
+
+#contactoFooter{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 200px;
+    justify-content: space-around;
+    background-color: rgb(144, 167, 190);
+    height: 350px;
+}
+
+footer img {
+    /* height: 150px;
+    object-fit: cover; */
+    width: 150px;
+}
+
+body{
+    height: 100vh;
+}
+
+#datosFooter{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+#datosFooter ul li{
+    padding-bottom: 10px;
+}
+
+.campoContacto{
+    padding: 5px;
+    width: 400px;
+}
+
+.campoContactoConsulta{
+    resize: none;
+}
+
+.boton{
+    padding: 5px;
+    width: 100px;
+}
