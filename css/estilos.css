@@ -5,6 +5,7 @@
     font-family: sans-serif;
 }
 
+
 .flex {
     display: flex;
     flex-flow: row nowrap;
@@ -20,6 +21,10 @@ ul  {
     list-style: none;
 
 }
+li  {
+    list-style: none;
+
+}
 ul a{
         color:#000;
         text-decoration: none;
@@ -27,7 +32,7 @@ ul a{
 
 #menuContenedor {
     background-color: rgb(144, 167, 190);
-    position: fixed;
+    
     width: 100%;
 }
 
@@ -40,6 +45,69 @@ ul a{
     gap: 100px;
     font-size: 24px;
 }
+
+
+                            /*slider*/
+
+.slideshow{
+    width: 100%;
+    position:relative;
+}
+.slider img{
+    height: 400px;
+    object-fit: cover;
+}
+.slider li{
+    overflow: hidden;
+    
+}
+.slider li, ul{
+    width: 100%;
+    
+}
+
+.slider li img{
+    width: 100%;
+    
+}
+
+.pagination{
+position:absolute;
+top:110%;
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+.pagination li{
+    font-size: 20px;
+    margin:2px 5px;
+    color:#858585;
+    cursor: pointer;
+
+}
+
+.left, .right{
+position:absolute;
+top:100px;
+height: 100%;
+display:flex;
+align-items: center;
+justify-content: center;
+color:#fff;
+font-size: 40px;
+cursor:pointer;
+z-index:20;
+}
+
+.left{
+    left:10px;
+}
+
+.right{
+    right:10px;
+}
+
 
 /* .navbar-toggle{
     display:none;
