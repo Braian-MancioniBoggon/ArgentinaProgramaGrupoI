@@ -1,5 +1,5 @@
 
-                                 //VALIDAR DATOS DEEL FORMULARIO
+                                 //VALIDAR DATOS DEL FORMULARIO
 function validarDatosForm(){
 let campoNombre = $(".campoContactoName").val();
 let campoMail = $(".campoContactoMail").val();
