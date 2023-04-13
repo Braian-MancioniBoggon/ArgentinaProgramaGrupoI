@@ -36,12 +36,12 @@ ul a{
 
 
 
-#redes ul li{
+.redes{
     padding: 15px;
     font-size: 28px;
 }
 
-#menu ul li{
+.seccion{
     padding: 30px;
     font-size: 24px;
 }
@@ -220,7 +220,7 @@ h1{
 #paso2{
     display: none;
 }
-#paso1{
+#paso3{
     display: none;
 }
 .padding{
@@ -238,7 +238,9 @@ textarea{
 *:focus{
     outline:none;
 }
-
+#avisoDeEnvio{
+    text-decoration: underline;
+}
 
 
 
