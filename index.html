@@ -20,17 +20,17 @@
             <img src="src/logo.png"  alt="logo">
         </div>
         <div id="menu">
-            <ul class="flex fmenu">
-                <li><a href="#">Quienes somos</a></li>
-                <li><a href="#">Tienda</a></li>
-                <li><a href="#">contacto</a></li>
+            <ul class="flex">
                 <li class="navbar-toggle"><i class="fa-solid fa-bars"></i></li>
-                <li><a href="#"><i class="lab la-facebook-square"></i></a></li>
-                <li><a href="#"><i class="lab la-instagram"></i></a></li>
-                <li><a href="#"><i class="las la-search"></i></a></li>
-                <li><a href="#"><i class="las la-shopping-cart"></i></a></i></li>
+                <li class="navbar-links"><a href="#">Quienes somos</a></li>
+                <li class="navbar-links"><a href="#">Tienda</a></li>
+                <li class="navbar-links"><a href="#">contacto</a></li>
+                <li class="navbar-links"><a href="#"><i class="lab la-facebook-square"></i></a></li>
+                <li class="navbar-links"><a href="#"><i class="lab la-instagram"></i></a></li>
+                <li class="navbar-links"><a href="#"><i class="las la-search"></i></a></li>
+                <li class="navbar-links"><a href="#"><i class="las la-shopping-cart"></i></a></i></li>
             </ul>
-            </div>
+        </div>
     </nav>
 
 
@@ -53,6 +53,33 @@
         </div>
         <div class="right">
             <span class="fa fa-chevron-right"></span>
+        </div>
+    </div>
+
+                            <!-- Formulario Wizard -->
+    <h1>Servicio Técnico</h1>
+    <div id="wizard">
+        
+        <h4>Solicitud enviada con exito.</h4>
+        <div id="paso1" class="wizardFlex">
+            <h3>1. Ingrese datos de contacto</h3>
+            <input type="text" placeholder="Nombre" class="padding margin">
+            <input type="text" placeholder="Mail" class="padding margin">
+            <button id="btnPaso1" class="padding margin">Siguiente</button>
+        </div>
+        <div id="paso2" class="wizardFlex">
+            <h3>2. Problema con el producto</h3>
+            <input type="text" placeholder="Marca y modelo del producto" class="padding margin">
+            <textarea name="problema" id="" cols="30" rows="10" placeholder="Problema" class="padding margin"></textarea>
+            <button id="btnPaso2" class="padding margin">Siguiente</button>
+        </div>
+        <div id="paso3" class="wizardFlex">
+            <h3>3. Verificar la información ingresada</h3>
+            <input type="text" placeholder="Nombre" class="padding margin">
+            <input type="text" placeholder="Mail" class="padding margin">
+            <input type="text" placeholder="Marca y modelo del producto" class="padding margin">
+            <textarea name="problema" id="" cols="30" rows="10" placeholder="Problema" class="padding margin"></textarea>
+            <button id="btnPaso3" class="padding margin">Finalizar</button>
         </div>
     </div>
 

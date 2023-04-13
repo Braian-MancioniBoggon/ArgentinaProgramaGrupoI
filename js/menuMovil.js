@@ -20,12 +20,12 @@
 
 
 
-const toggleButton = document.getElementsByClassName("navbar-toggle")[0];
-const navbarLinks = document.getElementsByClassName("fmenu");
-const navbarLinks2 = document.getElementsByClassName("fsocial");
+const toggleButton = document.getElementsByClassName(navbar-toggle)[0];
+const navbarLinks = document.getElementsByClassName(navbar-links);
+
 toggleButton.addEventListener('click', function () {
-    for (let i = 0; i < navbarLinks.length && i < navbarLinks2.length; i++)
+    for (let i = 0; i < navbarLinks.length; i++){
         navbarLinks[i].classList.toggle('active');
-        navbarLinks2[i].classList.toggle('active');
+    }
 });
 // })
