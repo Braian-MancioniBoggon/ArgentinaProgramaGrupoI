@@ -4,47 +4,52 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+ul li  {
+    list-style: none;
+    text-decoration: none;
 
-.navbar-toggle{
-    display:none;
 }
-.flex {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
+
+                            /*HEADER*/
+.header{
+width: 100%;
+padding: 1em;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-items: center;
+}
+.header .header-a img{
+    height: 100px;
     
-}
-
-#logo img{
-    height:100px;
-}
-
-ul  {
-    list-style: none;
 
 }
-li  {
-    list-style: none;
-
-}
-ul a{
-        color:#000;
-        text-decoration: none;
+.header .header-btn{
+    border:none;
+    background-color: transparent;
+    font-size: 1.5em;
+    display: none;
 }
 
+.header .nav-ul{
+display: flex;
+flex-flow: row nowrap;
+justify-content: flex-end;
+align-items: center;
 
-
-#redes ul li{
-    padding: 15px;
-    font-size: 28px;
 }
+.header .nav-li{
+margin: 0 .5em;
 
-#menu ul li{
-    padding: 30px;
-    font-size: 24px;
 }
+.header .nav-li a{
+    text-decoration: none;
+    color:#000;
+    letter-spacing: .2em;
+    font-size: 1em;
+    
+    }
+
 
 
                             /*slider*/
@@ -60,7 +65,7 @@ ul a{
 }
 .slider li{
     overflow: hidden;
-    
+
 }
 .slider li ul{
     width: 100%;
@@ -85,12 +90,13 @@ justify-content: center;
     margin:2px 5px;
     color:#858585;
     cursor: pointer;
-
+    list-style: none;
+    
 }
 
 .left, .right{
 position:absolute;
-top:50%;
+top:auto;
 display:flex;
 align-items: center;
 color:#e70606;
@@ -107,19 +113,6 @@ z-index:20;
     right:10px;
 }
 
-
-/* .navbar-toggle{
-    display:none;
-}
-
-.navbar-toggle{
-    display:block;
-    position:absolute;
-    top: 0px;
-    right: 0px;
-    margin:5px;
-    cursor: pointer;
-} */
 
                             /*footer*/
 
@@ -156,9 +149,10 @@ footer img {
     padding-bottom: 10px;
 }
 
-#mapa{
-    margin:15px;
-    
+
+.content-map{
+    width: 500px;
+    height: 300px;
 }
 #contactoFooter{
     display: flex;
@@ -242,37 +236,33 @@ textarea{
 
 
 
-@media (max-width: 1000px){
-    #menuContenedor{
+@media screen and (max-width: 500px){
+    
+    .header .header-btn{
+        display:block;
+        cursor: pointer;
+        
+    }
+    .header .nav{
+        width: 100%;
+        display:none;
+        
+    }
+    .header .nav.activo{
+        display: block;  
+        
+    }
+    .header .nav-ul{
         flex-direction: column;
     
     }
-    .navbar-links{
-        display: none;
-        width: 100%;
-        text-align: center;
+    .header .nav-li{
+        margin: 1rem 0;
+    
     }
-    .navbar-toggle{
-        display:flex;
-        flex-direction: row-reverse;
-        position:absolute;
-        top: 0px;
-        right: 0px;
-        margin:5px;
-        cursor: pointer;
-    }
-    .active{
-        display: block;
-    }
-    .navbar-links a{
-        display:block;
-        
-    }
-    .navbar-links a:hover{
-        transform: scale(1.2);
-        
-    }
-    .footer{
-        flex-flow:row wrap;
-    } 
+
+.content-map{
+    width: auto;
+}
+
 }

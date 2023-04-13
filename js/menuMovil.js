@@ -1,31 +1,12 @@
-// window.addEventListener('load', function(){
-// const  slider=document.getElementById("slider");
-// const imagenes =["imange1.jpg", "imange2.jpg","imange3.jpg"];
-// let index = 0;
+const button = document.querySelector('.header-btn');
+const nav = document.querySelector('.nav');
 
-// const cambiarImagenes= function(){
-//     var camino='imagenes/' + imagenes[index];
-//     slider.src= camino;
-
-//     if (index < imagenes.length-1)
-//     {
-//         index ++;
-//     }
-//     else{
-//         index = 0;
-//     }
-// }
-// cambiarImagenes();
-// this.setInterval(cambiarImagenes,5000);0
+button.addEventListener('click',()=>{
+    nav.classList.toggle('activo');
+})
 
 
 
-const toggleButton = document.getElementsByClassName(navbar-toggle)[0];
-const navbarLinks = document.getElementsByClassName(navbar-links);
 
-toggleButton.addEventListener('click', function () {
-    for (let i = 0; i < navbarLinks.length; i++){
-        navbarLinks[i].classList.toggle('active');
-    }
-});
-// })
+
+ 
