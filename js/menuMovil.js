@@ -28,4 +28,3 @@ toggleButton.addEventListener('click', function () {
         navbarLinks[i].classList.toggle('active');
     }
 });
-// })
