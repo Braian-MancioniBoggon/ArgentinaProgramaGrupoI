@@ -1,8 +1,6 @@
-const toggleButton = document.getElementsByClassName(navbar-toggle)[0];
-const navbarLinks = document.getElementsByClassName(navbar-links);
+let menu = document.querySelector("#menuCelular");
+let navbar = document.querySelector(".navbar");
 
-toggleButton.addEventListener('click', function () {
-    for (let i = 0; i < navbarLinks.length; i++){
-        navbarLinks[i].classList.toggle('active');
-    }
-});
+menu.onclick = () => {
+    navbar.classList.toggle("open");
+}
