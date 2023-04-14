@@ -11,9 +11,11 @@
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/sliderJquery.js"></script>
     <script src="js/validarDatosForm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 </head>
 <body>
-
+<!---------------------------------- Menu ---------------------------------->
     <nav id="menuContenedor" class="flex">
         <div id="logo">
             <img src="src/logo.png"  alt="logo">
@@ -31,81 +33,74 @@
             </ul>
         </div>
     </nav>
-
-
-
-                                <!-- SLIDER -->
-
-
+<!---------------------------------- Slider ---------------------------------->
     <div class="slidershow">
         <ul class="slider">
             <li><img src="imagenes/img1.jpg"></li>
             <li><img src="imagenes/img2.jpg"></li>
             <li><img src="imagenes/img3.jpg"></li>
         </ul>
-        <ol class="pagination">
-            
-        </ol>
-
-        <div class="left">
-            <span class="fa fa-chevron-left"></span>
-        </div>
-        <div class="right">
-            <span class="fa fa-chevron-right"></span>
+        <ol class="pagination"></ol>
+        <div class="navegacion">
+            <div class="left">
+                <span class="fa fa-chevron-left"></span>
+            </div>
+            <div class="right">
+                <span class="fa fa-chevron-right"></span>
+            </div>
         </div>
     </div>
-
-                            <!-- Formulario Wizard -->
+<!---------------------------------- Formulario Wizard ---------------------------------->
     <h1>Servicio Técnico</h1>
-    <div id="wizard">
-        
+    <form id="wizard" onsubmit="return false;">
         <h4 id="avisoDeEnvio">Solicitud enviada con exito.</h4>
         <div id="paso1" class="wizardFlex">
             <h3>1. Ingrese datos de contacto</h3>
-            <input type="text" id="nombrePaso1" placeholder="Nombre" class="padding margin">
-            <input type="text" id="mailPaso1" placeholder="Mail" class="padding margin">
+            <input name="nombre" type="text" id="nombrePaso1" placeholder="Nombre" class="padding margin">
+            <input name="mail" type="text" id="mailPaso1" placeholder="Mail" class="padding margin">
             <button id="btnPaso1" class="padding margin">Siguiente</button>
         </div>
         <div id="paso2" class="wizardFlex">
             <h3>2. Problema con el producto</h3>
-            <input type="text" id="modeloPaso2" placeholder="Marca y modelo del producto" class="padding margin">
+            <input name="modelo" type="text" id="modeloPaso2" placeholder="Marca y modelo del producto" class="padding margin">
             <textarea name="problema" id="problemaPaso2" cols="30" rows="10" placeholder="Problema" class="padding margin"></textarea>
-            <button id="btnPaso2" class="padding margin">Siguiente</button>
+            <div id="contenedorBtnPaso2" class="flex">
+                <button id="btnVolverPaso1" class="padding margin">Volver</button>
+                <button id="btnPaso2" class="padding margin">Siguiente</button>
+            </div>
         </div>
         <div id="paso3" class="wizardFlex">
             <h3>3. Verificar la información ingresada</h3>
-            <input type="text" id="nombrePaso3" placeholder="Nombre" class="padding margin">
-            <input type="text" id="mailPaso3" placeholder="Mail" class="padding margin">
-            <input type="text" id="modeloPaso3" placeholder="Marca y modelo del producto" class="padding margin">
-            <textarea name="problema" id="problemaPaso3" cols="30" rows="10" placeholder="Problema" class="padding margin"></textarea>
-            <button id="btnPaso3" class="padding margin">Finalizar</button>
+            <input disabled type="text" id="nombrePaso3" placeholder="Nombre" class="padding margin">
+            <input disabled type="text" id="mailPaso3" placeholder="Mail" class="padding margin">
+            <input disabled type="text" id="modeloPaso3" placeholder="Marca y modelo del producto" class="padding margin">
+            <textarea disabled name="problema" id="problemaPaso3" cols="30" rows="10" placeholder="Problema" class="padding margin"></textarea>
+            <div id="contenedorBtnPaso3" class="flex">
+                <button id="btnModificar" class="padding margin">Modificar</button>
+                <button id="btnPaso3" class="padding margin">Finalizar</button>
+            </div>
         </div>
-    </div>
-
-                            <!-- footer -->
-
+    </form>
+<!---------------------------------- Footer ---------------------------------->
     <footer>
         <div id="datosFooter">
             <img src="src/logo.png" alt="logo footer">
             <ul>
-                <li>Dirección: Maipu 44</li>
+                <li>Dirección: <span id="direccion">Maipu 44</span></li>
                 <li>Teléfono: <a href="tel:+5493517604386">03517604386</a></li>
                 <li>Mail: <a href="mailto:celulares@libres.com.ar">celulares@libres.com.ar</a></li>
             </ul>
         </div>
         <div id="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.8828808546655!2d-64.17972028205672!3d-31.42622768955564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a33bea2bcabd%3A0xa218add36036fea4!2sTienda%20Xiaomi%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1680061160013!5m2!1ses-419!2sar" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.8828808546655!2d-64.17972028205672!3d-31.42622768955564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a33bea2bcabd%3A0xa218add36036fea4!2sTienda%20Xiaomi%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1680061160013!5m2!1ses-419!2sar" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        
         <div id="contactoFooter">
             <h4>Contacto</h4>
-            
             <input type="text" placeholder="Nombre" class="campoContactoName">
             <input type="email" placeholder="Mail"class="campoContactoMail">
             <input type="tel" placeholder="Teléfono"class="campoContactoTel">
-            <textarea name="" id="" cols="30" rows="8" placeholder="Consulta" class="campoContactoConsulta"></textarea>
+            <textarea name="" id="" cols="26" rows="8" placeholder="Consulta" class="campoContactoConsulta"></textarea>
             <button onclick="validarDatosForm()" class="boton">Enviar</button>
-        
         </div>
     </footer>
     <script src="js/wizard.js"></script>

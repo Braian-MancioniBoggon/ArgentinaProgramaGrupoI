@@ -23,7 +23,7 @@ function pagination(){
     const paginationPos = $(this).index()+ 1;
     $(".slider li").hide();
     $('.slider li:nth-child('+ paginationPos +')').fadeIn();
-$(".pagination li").css({"color": "#858585"});
+$(".pagination li").css({"color": "#ffffff"});
     $(this).css({"color": "#CD6E2E"});
 
 imgPos =paginationPos;
@@ -35,7 +35,7 @@ if(imgPos >= imgItems){
     imgPos = 1;
 }else {imgPos++;}
 
-$(".pagination li").css({"color": "#858585"});
+$(".pagination li").css({"color": "#ffffff"});
 $('.pagination li:nth-child('+ imgPos +')').css({"color": "#CD6E2E"});
 
     $(".slider li").hide();
@@ -47,7 +47,7 @@ function prevSlider(){
         imgPos = imgItems;
     }else {imgPos--;}
     
-    $(".pagination li").css({"color": "#858585"});
+    $(".pagination li").css({"color": "#ffffff"});
     $('.pagination li:nth-child('+ imgPos +')').css({"color": "#CD6E2E"});
     
         $(".slider li").hide();
