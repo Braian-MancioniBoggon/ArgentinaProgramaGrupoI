@@ -1,28 +1,60 @@
+//Valido todos los campos del formulario
+$(document).ready(function() {
+    $("#contactoFooter").validate(
+        {
+            rules: {
+                nombreFooter: {
+                    required: true,
+                    minlength: 4
+                },
+                mailFooter: {
+                    required: true,
+                    email: true
+                },
+                telefonoFooter: {
+                    required: true,
+                    number: true,
+                    minlength: 10
+                },
+                consultaFooter:{
+                    required: true                
+                }
+            },
+            messages: {
+                nombreFooter: {
+                    required: "Este campo es obligatorio",
+                    minlength: "Debe tener al menos 4 letras"
+                },
+                mailFooter: {
+                    required: "Éste campo es obligatorio",
+                    email: "Mail invalido"
+                },
+                telefonoFooter: {
+                    required: "Éste campo es obligatorio",
+                    number: "Número invalido",
+                    minlength: "Debe tener 10 numeros contando el codigo de area"
+                },
+                consultaFooter: {
+                    required: "Éste campo es obligatorio",
+                }
+            }
+        }
+    )
+});
 
-                                 //VALIDAR DATOS DEL FORMULARIO
-function validarDatosForm(){
-let campoNombre = $(".campoContactoName").val();
-let campoMail = $(".campoContactoMail").val();
-let campoTel = $(".campoContactoTel").val();
-let campoConsulta = $("campoContactoConsulta").val();
-if(campoNombre === "" || campoMail === "" || campoTel === "" ){
-alert("Faltan datos en el formulario por ingresar, Por favor complete el formulario");
-$(".campoContactoName").val('');
-$(".campoContactoMail").val('');
-$(".campoContactoTel").val('');
-$(".campoContactoConsulta").val('');
-}else{
-alert("Datos enviados correctamente");
-$(".campoContactoName").val('');
-$(".campoContactoMail").val('');
-$(".campoContactoTel").val('');
-$(".campoContactoConsulta").val('');
-}
-}
+let nombreFooter = document.getElementById("nombreFooter");
+let mailFooter = document.getElementById("mailFooter");
+let telefonoFooter = document.getElementById("telefonoFooter");
+let consultaFooter = document.getElementById("consultaFooter");
+let enviarConsultaFooter = document.getElementById("enviarConsultaFooter");
 
+let enviarConsulta = () => {
+    if ($("#nombreFooter").valid() == true && $("#mailFooter").valid() == true && $("#telefonoFooter").valid() == true && $("#consultaFooter").valid() == true){
+        nombreFooter.value="";
+        mailFooter.value="";
+        telefonoFooter.value="";
+        consultaFooter.value="";
+    }
+};
 
-
-
-
-
-
+enviarConsultaFooter.addEventListener("click", enviarConsulta);
