@@ -34,8 +34,9 @@ align-items: center;
 .header .nav-ul{
 display: flex;
 flex-flow: row nowrap;
-justify-content: flex-end;
+justify-content: flex-start;
 align-items: center;
+
 
 }
 .header .nav-li{
@@ -65,17 +66,34 @@ margin: 0 .5em;
 }
 .slider li{
     overflow: hidden;
-
 }
 .slider li ul{
     width: 100%;
-    
 }
 
 .slider li img{
     width: 100%;
-    
 }
+.left, .right{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#CD6E2E;
+    font-size: 40px;
+    cursor:pointer;
+    z-index:20;
+    
+    
+    }
+    .left{
+        left: 20px;
+        
+    }
+    .right{
+        right: 20px;
+        
+    }
 
 .pagination{
 position:absolute;
@@ -83,7 +101,6 @@ top:auto;
 width: 100%;
 display: flex;
 justify-content: center;
-
 }
 .pagination li{
     font-size: 20px;
@@ -93,26 +110,6 @@ justify-content: center;
     list-style: none;
     
 }
-
-.left, .right{
-position:absolute;
-top:auto;
-display:flex;
-align-items: center;
-color:#e70606;
-font-size: 40px;
-cursor:pointer;
-z-index:20;
-}
-
-.left{
-    left:10px;
-}
-
-.right{
-    right:10px;
-}
-
 
                             /*footer*/
 
@@ -233,7 +230,12 @@ textarea{
     outline:none;
 }
 
-
+@media screen and (max-width: 1000px){
+    footer{
+        flex-flow: column nowrap;
+        
+    }
+}
 
 
 @media screen and (max-width: 500px){
