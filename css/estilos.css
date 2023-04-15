@@ -13,6 +13,7 @@ font-family: 'Montserrat', sans-serif; */
 
 body{
     margin: 0px;
+    color: #1c1c1e;
 }
 
 #menuContenedor{
@@ -150,6 +151,21 @@ ul a{
     right:10px;
 }
 
+                            /*tienda*/
+
+.tituloTienda{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* #tituloTienda1{
+    
+} */
+
+#tituloTienda2{
+    padding-top: 0px;
+}
+
                             /*footer*/
 
 footer{
@@ -207,21 +223,21 @@ footer img {
     height: 500px;  
 }
 #contactoFooter{
-    /* display: flex;
-    flex-flow: column wrap;
-    align-items: center;
     gap: 10px;
-    padding: 5px; */
-    gap: 10px;
-    border-left: 1px solid #3a3a3e;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 2vw;
     padding-bottom: 2vw;
-    padding-left: 2vw;
     display: flex;
     height: 500px;
-    
+    text-align: center; 
+}
+#formularioFooter{
+    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    height: 500px; 
 }
 #contactoFooter input {
     border:none;
@@ -301,6 +317,73 @@ textarea{
     font-size: 12px;
 }
 
+
+                            /*wizard*/
+
+.contenedor {
+    padding-top: 65px;
+    height: auto;
+    /* background: #212123 !important; */
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+    font-family: "Montserrat", sans-serif;
+}
+
+.item {
+    /* background: #28282a; */
+    background: radial-gradient(circle, rgba(102,51,153,1) 0%, rgba(51,0,102,1) 75%);
+    margin: 15px;
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.item img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.item:hover {
+    outline: 1px solid;
+    /* outline-color: #ffffff; */
+    outline-color: #28282a;
+}
+
+.numeracion {
+    background: #ffffff;
+    color: #212123;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 0px;
+}
+
+.titulo {
+    margin: 15px;
+    font-style: italic;
+    font-size: 22px;
+}
+
+.linea {
+    margin-top: 0px;
+    width: 40%;
+    height: 2px;
+    background: #8a5ed1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.consigna {
+    margin: 15px;
+    font-size: 14px;
+}
 
 
 @media (max-width: 1000px){

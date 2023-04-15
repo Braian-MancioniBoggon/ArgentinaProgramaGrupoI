@@ -8,10 +8,8 @@
     <link rel="shortcut icon" href="src/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="css/lightbox.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/83a2fc89d6.js" crossorigin="anonymous"></script>
-    <script src="js/jquery-3.6.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 </head>
 <body>
 <!---------------------------------- Menu ---------------------------------->
@@ -24,15 +22,15 @@
                 <li id="menuCelular" class="navbar-toggle"><i class="fa-solid fa-bars"></i></li>
                 <li class="navbar">
                     <ul class="menuFlex">
-                        <li class="navbar-links seccion"><a href="#">Quienes somos</a></li>
-                        <li class="navbar-links seccion"><a href="#">Tienda</a></li>
-                        <li class="navbar-links seccion"><a href="#">contacto</a></li>
+                        <li id="menuSomos" class="navbar-links seccion"><a href="#">Quienes somos</a></li>
+                        <li id="menuTienda" class="navbar-links seccion"><a href="#">Tienda</a></li>
+                        <li id="menuContacto" class="navbar-links seccion"><a href="#">contacto</a></li>
                         <li class="iconos">
                             <ul class="iconosFlex">
-                                <li class="navbar-links redes"><a href="#"><i class="lab la-facebook-square"></i></a></li>
-                                <li class="navbar-links redes"><a href="#"><i class="lab la-instagram"></i></a></li>
-                                <li class="navbar-links redes"><a href="#"><i class="las la-search"></i></a></li>
-                                <li class="navbar-links redes"><a href="#"><i class="las la-shopping-cart"></i></a></i></li>
+                                <li id="menuFacebook" class="navbar-links redes"><a href="https://www.facebook.com/celulareslibrescordoba1" target="_blank"><i class="lab la-facebook-square"></i></a></li>
+                                <li id="menuInstagram" class="navbar-links redes"><a href="https://www.instagram.com/celulareslibresdefabricacba/" target="_blank"><i class="lab la-instagram"></i></a></li>
+                                <li id="menuBusqueda" class="navbar-links redes"><a href="#"><i class="las la-search"></i></a></li>
+                                <li id="menuCarrito" class="navbar-links redes"><a href="#"><i class="las la-shopping-cart"></i></a></i></li>
                             </ul>
                         </li>
                     </ul>
@@ -54,6 +52,37 @@
             </div>
             <div class="right">
                 <span class="fa fa-chevron-right"></span>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------- Tienda ---------------------------------->
+    <div id="contenedorTienda">
+        <h1 id="tituloTienda1" class="tituloTienda">ULTIMOS</h1>
+        <h1 id="tituloTienda2" class="tituloTienda">INGRESOS!</h1>
+        <div class="contenedor">
+            <div class="item">
+                <a href="src/celu1.jpg" data-lightbox="tienda"><img src="src/celu1.jpg" alt="Celu1"></a>
+            </div>
+            <div class="item">
+                <a href="src/celu2.jpg" data-lightbox="tienda"><img src="src/celu2.jpg" alt="Celu2"></a>
+            </div>
+            <div class="item">
+                <a href="src/celu3.jpg" data-lightbox="tienda"><img src="src/celu3.jpg" alt="Celu3"></a>
+            </div>
+            <div class="item">
+                <a href="src/celu4.jpg" data-lightbox="tienda"><img src="src/celu4.jpg" alt="Celu4"></a>
+            </div>
+            <div class="item">
+                <a href="src/celu5.jpg" data-lightbox="tienda"><img src="src/celu5.jpg" alt="Celu5"></a>
+            </div>
+            <div class="item">
+                <a href="src/celu6.jpg" data-lightbox="tienda"><img src="src/celu6.jpg" alt="Celu6"></a>
+            </div>
+            <div class="item">
+                <a href="src/celu1.jpg" data-lightbox="tienda"><img src="src/celu1.jpg" alt="Celu1"></a>
+            </div>
+            <div class="item">
+                <a href="src/celu2.jpg" data-lightbox="tienda"><img src="src/celu2.jpg" alt="Celu2"></a>
             </div>
         </div>
     </div>
@@ -102,18 +131,24 @@
         <div id="mapa">
             
         </div>
-        <form id="contactoFooter" onsubmit="return false;">
-            <h4>Contacto</h4>
-            <input name="nombreFooter" id="nombreFooter" type="text" placeholder="Nombre" class="campoContactoName">
-            <input name="mailFooter" id="mailFooter" type="email" placeholder="Mail" class="campoContactoMail">
-            <input name="telefonoFooter" id="telefonoFooter" type="tel" placeholder="Teléfono" class="campoContactoTel">
-            <textarea name="consultaFooter" id="consultaFooter" cols="26" rows="8" placeholder="Consulta" class="campoContactoConsulta"></textarea>
-            <button id="btnEnviarFooter" class="padding margin">Enviar</button>
-        </form>
+        <div id="contactoFooter">
+            <form id="formularioFooter" onsubmit="return false;">
+                <h4>Contacto</h4>
+                <input name="nombreFooter" id="nombreFooter" type="text" placeholder="Nombre" class="campoContactoName">
+                <input name="mailFooter" id="mailFooter" type="email" placeholder="Mail" class="campoContactoMail">
+                <input name="telefonoFooter" id="telefonoFooter" type="tel" placeholder="Teléfono" class="campoContactoTel">
+                <textarea name="consultaFooter" id="consultaFooter" cols="26" rows="8" placeholder="Consulta" class="campoContactoConsulta"></textarea>
+                <button id="btnEnviarFooter" class="padding margin">Enviar</button>
+            </form>
+        </div>
     </footer>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <script src="js/sliderJquery.js"></script>
     <script src="js/validarDatosForm.js"></script>
     <script src="js/wizard.js"></script>
     <script src="js/menuMovil.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>

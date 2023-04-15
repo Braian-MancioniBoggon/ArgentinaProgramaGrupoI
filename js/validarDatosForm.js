@@ -6,7 +6,7 @@ let btnEnviarFooter = document.getElementById("btnEnviarFooter");
 
 //Valido todos los campos del formulario
 $(document).ready(function() {
-    $("#contactoFooter").validate(
+    $("#formularioFooter").validate(
         {
             rules: {
                 nombreFooter: {
