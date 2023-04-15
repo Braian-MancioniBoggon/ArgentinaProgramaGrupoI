@@ -26,7 +26,7 @@ let volverPaso1 = () => {
 
 //Guardo los valores de los inputs del paso 1 en los inputs del paso 3 ademas de ocultar el paso 1 y mostrar el paso 2
 let verPaso2 = () => {
-    if ($("#nombrePaso1").valid() == true && $("#mailPaso1").valid() == true){
+    if ($("#nombrePaso1").valid() && $("#mailPaso1").valid()){
         nombrePaso3.value=nombrePaso1.value;
         mailPaso3.value=mailPaso1.value;
         paso1.style.display="none";
@@ -36,7 +36,7 @@ let verPaso2 = () => {
 
 //Guardo los valores de los inputs del paso 2 en los inputs del paso 3 ademas de ocultar el paso 2 y mostrar el paso 3
 let verPaso3 = () => {
-    if ($("#modeloPaso2").valid() == true && $("#problemaPaso2").valid() == true){
+    if ($("#modeloPaso2").valid() && $("#problemaPaso2").valid()){
         modeloPaso3.value=modeloPaso2.value;
         problemaPaso3.value=problemaPaso2.value;
         paso2.style.display="none";

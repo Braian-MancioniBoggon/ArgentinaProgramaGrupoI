@@ -1,3 +1,9 @@
+let nombreFooter = document.getElementById("nombreFooter");
+let mailFooter = document.getElementById("mailFooter");
+let telefonoFooter = document.getElementById("telefonoFooter");
+let consultaFooter = document.getElementById("consultaFooter");
+let btnEnviarFooter = document.getElementById("btnEnviarFooter");
+
 //Valido todos los campos del formulario
 $(document).ready(function() {
     $("#contactoFooter").validate(
@@ -35,21 +41,15 @@ $(document).ready(function() {
                     minlength: "Debe tener 10 numeros contando el codigo de area"
                 },
                 consultaFooter: {
-                    required: "Éste campo es obligatorio",
+                    required: "Éste campo es obligatorio"
                 }
             }
         }
     )
 });
 
-let nombreFooter = document.getElementById("nombreFooter");
-let mailFooter = document.getElementById("mailFooter");
-let telefonoFooter = document.getElementById("telefonoFooter");
-let consultaFooter = document.getElementById("consultaFooter");
-let enviarConsultaFooter = document.getElementById("enviarConsultaFooter");
-
 let enviarConsulta = () => {
-    if ($("#nombreFooter").valid() == true && $("#mailFooter").valid() == true && $("#telefonoFooter").valid() == true && $("#consultaFooter").valid() == true){
+    if ($("#nombreFooter").valid() && $("#mailFooter").valid() && $("#telefonoFooter").valid() && $("#consultaFooter").valid()){
         nombreFooter.value="";
         mailFooter.value="";
         telefonoFooter.value="";
@@ -57,4 +57,4 @@ let enviarConsulta = () => {
     }
 };
 
-enviarConsultaFooter.addEventListener("click", enviarConsulta);
+btnEnviarFooter.addEventListener("click", enviarConsulta);
