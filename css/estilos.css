@@ -9,6 +9,7 @@ font-family: 'Montserrat', sans-serif; */
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -51,6 +52,10 @@ body{
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
+}
+
+#logo{
+    cursor: pointer;
 }
 
 #logo img{
