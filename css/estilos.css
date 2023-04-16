@@ -17,6 +17,24 @@ body{
     color: #1c1c1e;
 }
 
+button{
+    background: linear-gradient(41deg, rgba(255,153,51,1) 0%, rgba(255,102,102,1) 100%);
+    color: #ffffff;
+    font-weight: bolder !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 10px !important;
+    border-radius: 5px;
+}
+
+button:hover{
+    background: linear-gradient(-101deg, rgba(153,51,204,1) 0%, rgba(51,0,204,1) 100%);
+}
+
+.ancla{
+    height: 125px;
+}
+
 #menuContenedor{
     height: 75px;
     position: fixed;
@@ -94,10 +112,10 @@ ul a{
 
 .slidershow{
     padding-top: 75px;
-    margin-bottom: 75px;
     max-width: 100%;
     position:relative;
-    height: 600px;
+    height: 675px;
+    overflow: hidden;
 }
 .slider img{
     height: 600px;
@@ -158,17 +176,30 @@ ul a{
 
                             /*tienda*/
 
-.tituloTienda{
+
+
+.resaltado{
+    padding: 10px;
+    color: #ffffff;
+}
+
+.fondoNaranja{
+    border-radius: 10px;
+    background: linear-gradient(41deg, rgba(255,153,51,1) 0%, rgba(255,102,102,1) 100%);
+}
+
+.fondoVioleta{
+    border-radius: 10px;
+    background: linear-gradient(41deg, rgba(153,51,204,1) 0%, rgba(51,0,204,1) 100%);
+}
+
+#tituloTienda{
     font-size: 50px;
     font-weight: 700;
 }
-
-/* #tituloTienda1{
-    
-} */
-
-#tituloTienda2{
-    padding-top: 0px;
+#tituloServicio{
+    font-size: 50px;
+    font-weight: 700;
 }
 
                             /*footer*/
@@ -180,9 +211,8 @@ footer{
     align-items: center;
     justify-content: space-around;
     background-color: #1c1c1e;
-    border-top: 1px solid #3a3a3e;
     border-bottom: 5px solid #ff9933;
-    margin-top: 4vw;
+    /* margin-top: 4vw; */
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #ffffff;
@@ -199,12 +229,8 @@ footer a{
 }
 
 footer img {
-    /* height: 150px;
-    object-fit: cover; */
     width: 150px;
 }
-
-
 
 #datosFooter{
     display: flex;
@@ -227,6 +253,7 @@ footer img {
     padding-bottom: 2vw;  
     height: 500px;  
 }
+
 #contactoFooter{
     gap: 10px;
     flex-direction: column;
@@ -265,33 +292,62 @@ footer img {
     box-shadow: 5px 15px 9px -9px rgba(0,0,0,0.67);
 }
 
+#btnApiDolar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#mostrarDolar h4{
+    padding: 15px 0px 5px 0px;
+}
+
+#mostrarDolar p{
+    padding: 5px 0px;
+}
+
+#mostrarDolar span{
+    font-weight: 500;
+}
+
 
                             /*wizard*/
+
+#seccionWizard{
+    background-color: #fafafa;
+    height: fit-content;
+}
 #wizard{
     width: 100%;
     min-height: 400px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
 h1{
-    padding-top: 65px;
     text-align: center;
 }
 #wizard h4{
+    text-align: center;
     padding: 5px 0px;
     display: none;
 }
-#wizard h3{
-    padding: 15px 0px;
-    text-align: center;
+#wizard input{
+    text-align: left;
+    border: solid 1px #1c1c1e;
+    padding: 10px;
+}
+#wizard textarea{
+    text-align: left;
+    border: solid 1px #1c1c1e;
 }
 .wizardFlex{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 400px;
 }
 #paso2{
     display: none;
@@ -305,7 +361,7 @@ h1{
 .margin{
     margin: 5px 0px;
     border-radius:5px;
-    border: ridge;
+    border: solid 1px;
 }
 textarea{
     resize: none;
@@ -316,14 +372,56 @@ textarea{
 }
 #avisoDeEnvio{
     text-decoration: underline;
+    color: rgba(153,51,204,1);
+    font-weight: 600;
 }
 .error{
     text-align: center;
     font-size: 12px;
 }
 
+#guiaServicio{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+    height: fit-content;
+    border: solid 1px #ff9933;
+    border-left: none;
+    border-right: none;
+}
 
-                            /*wizard*/
+.pasoActual{
+    background: linear-gradient(41deg, rgba(255,153,51,1) 0%, rgba(255,102,102,1) 100%);
+    border: none;
+}
+
+.pasoActual span{
+    color: #ffffff;
+}
+
+.itemServicio{
+    padding: 5px;
+    border: solid 1px #ff9933;
+    border-top: none;
+    border-bottom: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.itemServicio i{
+    font-size: 35px;
+}
+
+#btnPaso2, #btnVolverPaso1, #btnModificar, #btnPaso3{
+    width: 175px;
+}
+
+                            /*tienda*/
+
+#anclaContacto {
+    height: 50px;
+}
 
 .contenedor {
     padding-top: 65px;
@@ -390,17 +488,34 @@ textarea{
     font-size: 14px;
 }
 
+#avisoRedes{
+    margin-top: 30px;
+}
+.aviso{
+    width: 100%;
+    height: 65px;
+    border-radius: 0px;
+    font-weight: bolder;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.aviso a{
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
 
 @media (max-width: 1000px){
     #menuContenedor{
         flex-direction: column;
         height: 65px;    
     }
-    /* .navbar-links{
-        display: none;
-        width: 100%;
-        text-align: center;
-    } */
     .navbar{
         position: absolute;
         top: 100%;
@@ -457,8 +572,7 @@ textarea{
     }
     .slidershow{
         padding-top: 65px;
-        margin-bottom: 65px;
-        height: 300px;
+        height: 365px;
     }
     .slider img{
         height: 300px;
