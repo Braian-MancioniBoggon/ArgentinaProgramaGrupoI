@@ -292,6 +292,8 @@ footer img {
     box-shadow: 5px 15px 9px -9px rgba(0,0,0,0.67);
 }
 
+                            /*API*/
+
 #btnApiDolar{
     display: flex;
     flex-direction: column;
@@ -413,8 +415,12 @@ textarea{
     font-size: 35px;
 }
 
-#btnPaso2, #btnVolverPaso1, #btnModificar, #btnPaso3{
+#btnPaso2, #btnVolverPaso1{
     width: 175px;
+}
+
+#btnPDF, #btnModificar, #btnPaso3{
+    width: 130px;
 }
 
                             /*tienda*/
@@ -490,6 +496,7 @@ textarea{
 
 #avisoRedes{
     margin-top: 30px;
+    height: fit-content;
 }
 .aviso{
     width: 100%;
@@ -500,7 +507,7 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 20px;
+    padding: 30px 20px;
 }
 
 .aviso a{
@@ -510,6 +517,18 @@ textarea{
     font-size: 40px;
 }
 
+                            /*somos*/
+
+#seccionSomos{
+    height: fit-content;
+}
+
+#contenedorSomos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 @media (max-width: 1000px){
     #menuContenedor{

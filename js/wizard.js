@@ -22,6 +22,7 @@ const guiaPaso2 = document.getElementById("guiaPaso2");
 const iconoPaso2 = document.getElementById("iconoPaso2");
 const guiaPaso3 = document.getElementById("guiaPaso3");
 const iconoPaso3 = document.getElementById("iconoPaso3");
+const btnPDF = document.getElementById("btnPDF");
 
 //Guardo los valores de los inputs del paso 1 en los inputs del paso 3 ademas de ocultar el paso 1 y mostrar el paso 2
 let verPaso2 = () => {
@@ -93,6 +94,22 @@ let modificarTodo = () => {
 let ocultarAviso = () => {
     avisoDeEnvio.style.display="none";
 }
+
+//Funcion para exportar PDF
+let exportarPDF = () => {
+    let doc = new jsPDF();
+    let cortarProblema = doc.splitTextToSize(problemaPaso3.value, 190);
+    doc.text("Nombre: " + nombrePaso3.value, 10, 18);
+    doc.text("Mail: " + mailPaso3.value, 10, 26);
+    doc.text("Modelo: " + modeloPaso3.value, 10, 34);
+    doc.line(10,38,201,38);
+    doc.text(cortarProblema, 10, 45);
+    // doc.text("Problema: " + problemaPaso3.value, 10, 46);
+    doc.save("Solicitud servicio tecnico " + nombrePaso3.value);
+}
+
+//Al apretar el boton exporto en PDF el contenido del formulario
+btnPDF.addEventListener("click", exportarPDF);
 
 //Al apretar el boton del paso 1 va a llamar a la función "verPaso2"
 btnPaso1.addEventListener("click", verPaso2);
