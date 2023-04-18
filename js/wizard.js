@@ -104,7 +104,6 @@ let exportarPDF = () => {
     doc.text("Modelo: " + modeloPaso3.value, 10, 34);
     doc.line(10,38,201,38);
     doc.text(cortarProblema, 10, 45);
-    // doc.text("Problema: " + problemaPaso3.value, 10, 46);
     doc.save("Solicitud servicio tecnico " + nombrePaso3.value);
 }
 
