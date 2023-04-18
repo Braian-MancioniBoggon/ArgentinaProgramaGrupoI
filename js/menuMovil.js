@@ -1,7 +1,9 @@
+//Declaro todos los elementos que voy a utilizar
 let menu = document.querySelector("#menuCelular");
 let navbar = document.querySelector(".navbar");
 let menuSomos = document.querySelector("#menuSomos");
 let menuTienda = document.querySelector("#menuTienda");
+let menuServicio = document.querySelector("#menuServicio");
 let menuContacto = document.querySelector("#menuContacto");
 let menuFacebook = document.querySelector("#menuFacebook");
 let menuInstagram = document.querySelector("#menuInstagram");
@@ -17,6 +19,10 @@ menuSomos.onclick = () => {
 }
 
 menuTienda.onclick = () => {
+    navbar.classList.toggle("open");
+}
+
+menuServicio.onclick = () => {
     navbar.classList.toggle("open");
 }
 
