@@ -1,3 +1,4 @@
+//Declaro todos los elementos que voy a utilizar
 let menu = document.querySelector("#menuCelular");
 let navbar = document.querySelector(".navbar");
 let menuSomos = document.querySelector("#menuSomos");
