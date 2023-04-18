@@ -13,7 +13,8 @@ $(document).ready(function () {
     $(".left span").click(prevSlider);
     tiempo();
 
-    //FUNCIONES ===============================
+// ---------------------------------- Funciones ----------------------------------
+
     function tiempo() {
         setInterval(function () { nextSlider() }, 4000);
     }

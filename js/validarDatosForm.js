@@ -1,8 +1,9 @@
-let nombreFooter = document.getElementById("nombreFooter");
-let mailFooter = document.getElementById("mailFooter");
-let telefonoFooter = document.getElementById("telefonoFooter");
-let consultaFooter = document.getElementById("consultaFooter");
-let btnEnviarFooter = document.getElementById("btnEnviarFooter");
+//Declaro todos los elementos que voy a utilizar
+const nombreFooter = document.getElementById("nombreFooter");
+const mailFooter = document.getElementById("mailFooter");
+const telefonoFooter = document.getElementById("telefonoFooter");
+const consultaFooter = document.getElementById("consultaFooter");
+const btnEnviarFooter = document.getElementById("btnEnviarFooter");
 
 //Valido todos los campos del formulario
 $(document).ready(function () {
