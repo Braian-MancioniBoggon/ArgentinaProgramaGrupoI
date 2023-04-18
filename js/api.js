@@ -19,9 +19,9 @@ let obtenerDatos = (dolar) => {
 
       for (let tipoDolar of datos) {
         if (tipoDolar.casa.nombre === dolar) {
-          mostrarDolar.innerHTML += ` <h4 id="cotizacionTitulo">Dolar ${dolar}</h4>
-                                      <p id="cotizacionCompra">Compra: <span>$${tipoDolar.casa.compra.slice(0, 6)}</span></p>
-                                      <p id="cotizacionVenta">Venta: <span>$${tipoDolar.casa.venta.slice(0, 6)}</span></p>`
+          mostrarDolar.innerHTML += ` <h4>Dolar ${dolar}</h4>
+                                      <p>Compra: <span>$${tipoDolar.casa.compra.slice(0, 6)}</span></p>
+                                      <p>Venta: <span>$${tipoDolar.casa.venta.slice(0, 6)}</span></p>`
         }
       }
     }
