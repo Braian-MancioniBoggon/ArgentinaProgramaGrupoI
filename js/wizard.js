@@ -26,73 +26,73 @@ const btnPDF = document.getElementById("btnPDF");
 
 //Guardo los valores de los inputs del paso 1 en los inputs del paso 3 ademas de ocultar el paso 1 y mostrar el paso 2
 let verPaso2 = () => {
-    if ($("#nombrePaso1").valid() && $("#mailPaso1").valid()){
-        nombrePaso3.value=nombrePaso1.value;
-        mailPaso3.value=mailPaso1.value;
-        paso1.style.display="none";
-        paso2.style.display="flex";
+    if ($("#nombrePaso1").valid() && $("#mailPaso1").valid()) {
+        nombrePaso3.value = nombrePaso1.value;
+        mailPaso3.value = mailPaso1.value;
+        paso1.style.display = "none";
+        paso2.style.display = "flex";
         guiaPaso1.classList.toggle("pasoActual");
-        iconoPaso1.innerHTML=`<i class="las la-check-circle"></i>`;
+        iconoPaso1.innerHTML = `<i class="las la-check-circle"></i>`;
         guiaPaso2.classList.toggle("pasoActual");
     }
 };
 
 //Guardo los valores de los inputs del paso 2 en los inputs del paso 3 ademas de ocultar el paso 2 y mostrar el paso 3
 let verPaso3 = () => {
-    if ($("#modeloPaso2").valid() && $("#problemaPaso2").valid()){
-        modeloPaso3.value=modeloPaso2.value;
-        problemaPaso3.value=problemaPaso2.value;
-        paso2.style.display="none";
-        paso3.style.display="flex";
+    if ($("#modeloPaso2").valid() && $("#problemaPaso2").valid()) {
+        modeloPaso3.value = modeloPaso2.value;
+        problemaPaso3.value = problemaPaso2.value;
+        paso2.style.display = "none";
+        paso3.style.display = "flex";
         guiaPaso2.classList.toggle("pasoActual");
-        iconoPaso2.innerHTML=`<i class="las la-check-circle"></i>`;
+        iconoPaso2.innerHTML = `<i class="las la-check-circle"></i>`;
         guiaPaso3.classList.toggle("pasoActual");
     }
 };
 
 //Oculto el paso 3, borro el contenido de los inputs de los pasos anteriores y muestro nuevamente el paso 1 pero con el texto de "Solicitud enviada..." que se ocultará automaticamente despues del tiempo estimado
 let verPaso1 = () => {
-    paso3.style.display="none";
-    paso1.style.display="flex";
-    nombrePaso1.value="";
-    mailPaso1.value="";
-    modeloPaso2.value="";
-    problemaPaso2.value="";
+    paso3.style.display = "none";
+    paso1.style.display = "flex";
+    nombrePaso1.value = "";
+    mailPaso1.value = "";
+    modeloPaso2.value = "";
+    problemaPaso2.value = "";
     guiaPaso3.classList.toggle("pasoActual");
-    iconoPaso3.innerHTML=`<i class="las la-dot-circle"></i>`;
+    iconoPaso3.innerHTML = `<i class="las la-dot-circle"></i>`;
     guiaPaso1.classList.toggle("pasoActual");
-    iconoPaso1.innerHTML=`<i class="las la-dot-circle"></i>`;
-    iconoPaso2.innerHTML=`<i class="las la-dot-circle"></i>`;
-    avisoDeEnvio.style.display="block";
-    setTimeout(ocultarAviso,5000)
+    iconoPaso1.innerHTML = `<i class="las la-dot-circle"></i>`;
+    iconoPaso2.innerHTML = `<i class="las la-dot-circle"></i>`;
+    avisoDeEnvio.style.display = "block";
+    setTimeout(ocultarAviso, 5000)
 };
 
 //Vuerlvo al paso 1 para modificar los datos ingresados
 let volverPaso1 = () => {
-    paso1.style.display="flex";
-    paso2.style.display="none";
-    paso3.style.display="none";
+    paso1.style.display = "flex";
+    paso2.style.display = "none";
+    paso3.style.display = "none";
     guiaPaso1.classList.toggle("pasoActual");
-    iconoPaso1.innerHTML=`<i class="las la-dot-circle"></i>`;
+    iconoPaso1.innerHTML = `<i class="las la-dot-circle"></i>`;
     guiaPaso2.classList.toggle("pasoActual");
-    iconoPaso2.innerHTML=`<i class="las la-dot-circle"></i>`;
+    iconoPaso2.innerHTML = `<i class="las la-dot-circle"></i>`;
 }
 
 //Vuerlvo al paso 1 para modificar los datos ingresados
 let modificarTodo = () => {
-    paso1.style.display="flex";
-    paso2.style.display="none";
-    paso3.style.display="none";
+    paso1.style.display = "flex";
+    paso2.style.display = "none";
+    paso3.style.display = "none";
     guiaPaso1.classList.toggle("pasoActual");
-    iconoPaso1.innerHTML=`<i class="las la-dot-circle"></i>`;
+    iconoPaso1.innerHTML = `<i class="las la-dot-circle"></i>`;
     guiaPaso3.classList.toggle("pasoActual");
-    iconoPaso2.innerHTML=`<i class="las la-dot-circle"></i>`;
-    iconoPaso3.innerHTML=`<i class="las la-dot-circle"></i>`;
+    iconoPaso2.innerHTML = `<i class="las la-dot-circle"></i>`;
+    iconoPaso3.innerHTML = `<i class="las la-dot-circle"></i>`;
 }
 
 //Oculto el aviso
 let ocultarAviso = () => {
-    avisoDeEnvio.style.display="none";
+    avisoDeEnvio.style.display = "none";
 }
 
 //Funcion para exportar PDF
@@ -102,7 +102,7 @@ let exportarPDF = () => {
     doc.text("Nombre: " + nombrePaso3.value, 10, 18);
     doc.text("Mail: " + mailPaso3.value, 10, 26);
     doc.text("Modelo: " + modeloPaso3.value, 10, 34);
-    doc.line(10,38,201,38);
+    doc.line(10, 38, 201, 38);
     doc.text(cortarProblema, 10, 45);
     doc.save("Solicitud servicio tecnico " + nombrePaso3.value);
 }
@@ -126,7 +126,7 @@ btnModificar.addEventListener("click", modificarTodo);
 btnVolverPaso1.addEventListener("click", volverPaso1);
 
 //Valido todos los campos del formulario
-$(document).ready(function() {
+$(document).ready(function () {
     $("#wizard").validate(
         {
             rules: {
@@ -142,8 +142,8 @@ $(document).ready(function() {
                     required: true,
                     minlength: 4
                 },
-                problema:{
-                    required: true                
+                problema: {
+                    required: true
                 }
             },
             messages: {

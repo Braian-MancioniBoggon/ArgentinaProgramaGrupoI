@@ -5,7 +5,7 @@ let consultaFooter = document.getElementById("consultaFooter");
 let btnEnviarFooter = document.getElementById("btnEnviarFooter");
 
 //Valido todos los campos del formulario
-$(document).ready(function() {
+$(document).ready(function () {
     $("#formularioFooter").validate(
         {
             rules: {
@@ -22,8 +22,8 @@ $(document).ready(function() {
                     number: true,
                     minlength: 10
                 },
-                consultaFooter:{
-                    required: true                
+                consultaFooter: {
+                    required: true
                 }
             },
             messages: {
@@ -49,11 +49,11 @@ $(document).ready(function() {
 });
 
 let enviarConsulta = () => {
-    if ($("#nombreFooter").valid() && $("#mailFooter").valid() && $("#telefonoFooter").valid() && $("#consultaFooter").valid()){
-        nombreFooter.value="";
-        mailFooter.value="";
-        telefonoFooter.value="";
-        consultaFooter.value="";
+    if ($("#nombreFooter").valid() && $("#mailFooter").valid() && $("#telefonoFooter").valid() && $("#consultaFooter").valid()) {
+        nombreFooter.value = "";
+        mailFooter.value = "";
+        telefonoFooter.value = "";
+        consultaFooter.value = "";
     }
 };
 
