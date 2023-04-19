@@ -97,6 +97,8 @@ let ocultarAviso = () => {
 
 //Funcion para exportar PDF
 let exportarPDF = () => {
+    let logo = new Image();
+    logo.src = "../src/logo.png";
     let doc = new jsPDF();
     let cortarProblema = doc.splitTextToSize(problemaPaso3.value, 190);
     doc.text("Nombre: " + nombrePaso3.value, 10, 18);
@@ -104,6 +106,7 @@ let exportarPDF = () => {
     doc.text("Modelo: " + modeloPaso3.value, 10, 34);
     doc.line(10, 38, 201, 38);
     doc.text(cortarProblema, 10, 45);
+    doc.addImage(logo, "PNG", 173, 8, 28, 28);
     doc.save("Solicitud servicio tecnico " + nombrePaso3.value);
 }
 
